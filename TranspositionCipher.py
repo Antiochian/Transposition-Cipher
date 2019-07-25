@@ -1,17 +1,13 @@
 #Transposition cipher encryption
 
-import pyperclip
-
 def main():
     myMessage = 'Common sense is not so common.'
     myKey = 8
 
     ciphertext = encryptMessage(myKey, myMessage)
 
-#Print encrypted version (with pipe to resolve any spaces)
+#Print encrypted version (with pipe to show any spaces)
     print(ciphertext + '|')
-#copy to clipboard
-    pyperclip.copy(ciphertext)
 
 def encryptMessage(key, message):
 #each string represents a column in the grid (??)
