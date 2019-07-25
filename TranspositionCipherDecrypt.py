@@ -1,20 +1,19 @@
 #Transposition cipher decryption
-import math,pyperclip
+import math
 
 def main():
+    #example message and key
     myMessage = 'Cenoonommstmme oo snnio. s s c'
     myKey = 8
 
     plaintext = decryptMessage(myKey, myMessage)
-
-    print(plaintext)
-    pyperclip.copy(plaintext)
+    print(plaintext) #output result
 
 def decryptMessage(key, ciphertext):
     width = math.ceil(len(ciphertext)/key)
     height = key
     plaintext = ['']*width
-    shadedboxes = (height*width) - len(ciphertext)
+    shadedboxes = (height*width) - len(ciphertext) #determine number of unused boxes
 #pointer coordinates
     x = 0
     y = 0
